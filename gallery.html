@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bộ sưu tập | Huynh TNhaan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #ead8b9;
+      color: #42291b;
+      font-family: "DM Sans", sans-serif;
+    }
+    header {
+      padding: 22px 7%;
+      background: #382116;
+      color: #f6ecd8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #ae8754;
+    }
+    header strong {
+      font: 24px "Playfair Display", serif;
+    }
+    nav { display: flex; gap: 18px; flex-wrap: wrap; }
+    nav a { color: #ead4b0; text-decoration: none; font-size: 14px; }
+    nav a:hover { color: white; }
+    .hero {
+      padding: 80px 20px 45px;
+      text-align: center;
+      background: radial-gradient(ellipse at top, #f8edd8, transparent 75%);
+    }
+    .eyebrow {
+      color: #906b42;
+      letter-spacing: 4px;
+      font-size: 11px;
+    }
+    h1, h2 { font-family: "Playfair Display", serif; font-weight: 500; }
+    h1 { font-size: clamp(42px, 7vw, 70px); margin: 18px 0; }
+    .hero p { color: #80674f; line-height: 1.8; }
+    .gallery {
+      max-width: 1100px;
+      padding: 25px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+    }
+    figure {
+      margin: 0;
+      padding: 12px 12px 20px;
+      background: #f8efdf;
+      border: 1px solid #d0b38a;
+      box-shadow: 0 8px 20px #38211612;
+      transition: transform .35s, box-shadow .35s;
+    }
+    figure:nth-child(even) { transform: rotate(1deg); }
+    figure:nth-child(odd) { transform: rotate(-1deg); }
+    figure:hover {
+      transform: translateY(-7px) rotate(0);
+      box-shadow: 0 15px 30px #38211625;
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      filter: sepia(20%);
+      transition: filter .4s;
+    }
+    figure:hover img { filter: sepia(0); }
+    figcaption {
+      padding-top: 15px;
+      text-align: center;
+      font: 20px "Playfair Display", serif;
+    }
+    .back {
+      display: block;
+      width: fit-content;
+      margin: 35px auto 70px;
+      padding: 14px 25px;
+      background: #382116;
+      color: #f6ecd8;
+      text-decoration: none;
+      border: 1px solid #ae8754;
+      transition: background .25s;
+    }
+    .back:hover { background: #744b2d; }
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .7s, transform .7s;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    footer {
+      padding: 25px;
+      background: #2b1911;
+      color: #cbb08b;
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+    @media(max-width: 750px) {
+      .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+      figure img { height: 220px; }
+    }
+    @media(max-width: 480px) {
+      .gallery { grid-template-columns: 1fr; }
+      figure img { height: 270px; }
+    }
+    @media(prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>Huynh TNhaan.</strong>
+    <nav>
+      <a href="index.html">Trang chủ</a>
+      <a href="next.html">Khám phá</a>
+      <a href="gallery.html">Bộ sưu tập</a>
+      <a href="contact.html">Liên hệ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Collected moments</div>
+      <h1>Bộ sưu tập của mình.</h1>
+      <p>Một vài khung hình, một vài cảm xúc, những điều muốn lưu lại.</p>
+    </section>
+
+    <section class="gallery">
+      <figure class="reveal">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80" alt="Núi và hồ" loading="lazy">
+        <figcaption>Những miền xa</figcaption>
+      </figure>
+      <figure class="reveal">
+        <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=800&q=80" alt="Ánh nắng trên cánh đồng" loading="lazy">
+        <figcaption>Một sớm bình yên</figcaption>
+      </figure>
+      <figure class="reveal">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80" alt="Khu rừng xanh" loading="lazy">
+        <figcaption>Chạm vào thiên nhiên</figcaption>
+      </figure>
+      <figure class="reveal">
+        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=80" alt="Những bông hoa" loading="lazy">
+        <figcaption>Những điều dịu dàng</figcaption>
+      </figure>
+      <figure class="reveal">
+        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=800&q=80" alt="Một góc quán cà phê" loading="lazy">
+        <figcaption>Góc cà phê quen</figcaption>
+      </figure>
+      <figure class="reveal">
+        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80" alt="Sổ tay và viết" loading="lazy">
+        <figcaption>Những trang nhật ký</figcaption>
+      </figure>
+    </section>
+
+    <a class="back" href="next.html">← Quay lại khám phá</a>
+  </main>
+
+  <footer>HUYNH TNHAAN · A COLLECTION OF MOMENTS</footer>
+
+  <script>
+    const cards = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      cards.forEach((card) => observer.observe(card));
+    } else {
+      cards.forEach((card) => card.classList.add("visible"));
+    }
+  </script>
+</body>
+</html>
