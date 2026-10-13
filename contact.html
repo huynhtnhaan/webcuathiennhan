@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liên hệ | Huynh TNhaan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #ead8b9;
+      color: #42291b;
+      font-family: "DM Sans", sans-serif;
+    }
+    header {
+      padding: 22px 7%;
+      background: #382116;
+      color: #f6ecd8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      border-bottom: 1px solid #ae8754;
+    }
+    header strong { font: 24px "Playfair Display", serif; }
+    nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    nav a { color: #ead4b0; text-decoration: none; font-size: 14px; }
+    nav a:hover { color: white; }
+    main {
+      min-height: 75vh;
+      padding: 75px 22px;
+      background: radial-gradient(ellipse at top, #f8edd8, transparent 75%);
+    }
+    .letter {
+      max-width: 700px;
+      margin: auto;
+      padding: clamp(28px, 6vw, 65px);
+      background: #f8efdf;
+      border: 1px solid #c6a47a;
+      outline: 1px solid #c6a47a55;
+      outline-offset: -9px;
+      box-shadow: 0 15px 40px #38211614;
+    }
+    .eyebrow {
+      color: #906b42;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-align: center;
+    }
+    h1, h2 { font-family: "Playfair Display", serif; font-weight: 500; }
+    h1 { text-align: center; font-size: clamp(40px, 7vw, 65px); }
+    .lead {
+      text-align: center;
+      font: italic 22px/1.7 "Playfair Display", serif;
+    }
+    .body-copy { color: #80674f; line-height: 2; }
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 30px;
+    }
+    .contact-item {
+      padding: 17px;
+      border: 1px solid #d8c09b;
+      transition: background .25s, transform .25s;
+    }
+    .contact-item:hover {
+      background: #efe0c6;
+      transform: translateX(4px);
+    }
+    .contact-item strong {
+      display: block;
+      margin-bottom: 5px;
+      font-family: "Playfair Display", serif;
+      font-size: 19px;
+    }
+    .contact-item a { color: #774b28; overflow-wrap: anywhere; }
+    .back {
+      display: block;
+      width: fit-content;
+      margin: 32px auto 0;
+      padding: 14px 25px;
+      background: #382116;
+      color: #f6ecd8;
+      text-decoration: none;
+      border: 1px solid #ae8754;
+      transition: background .25s, transform .25s;
+    }
+    .back:hover { background: #744b2d; transform: translateY(-2px); }
+    .letter {
+      animation: enter .8s ease both;
+    }
+    @keyframes enter {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    footer {
+      padding: 25px;
+      background: #2b1911;
+      color: #cbb08b;
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+    @media(prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>Huynh TNhaan.</strong>
+    <nav>
+      <a href="index.html">Trang chủ</a>
+      <a href="next.html">Khám phá</a>
+      <a href="gallery.html">Bộ sưu tập</a>
+      <a href="contact.html">Liên hệ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="letter">
+      <div class="eyebrow">A LETTER FOR YOU</div>
+      <h1>Gửi lời chào.</h1>
+
+      <p class="lead">
+        “Cảm ơn bạn đã dành chút thời gian ghé thăm góc nhỏ này.”
+      </p>
+
+      <p class="body-copy">
+        Mình là Huynh TNhaan. Đây là không gian nhỏ do mình tạo ra
+        để lưu giữ những điều yêu thích và chia sẻ một chút thế giới
+        của mình với mọi người.
+      </p>
+
+      <p class="body-copy">
+        Nếu bạn muốn kết nối hoặc gửi lời nhắn, bạn có thể thêm
+        thông tin liên hệ của mình bên dưới.
+      </p>
+
+      <div class="contact-list">
+        <div class="contact-item">
+          <strong>✉ Email</strong>
+          <span>Thay bằng email của bạn</span>
+        </div>
+
+        <div class="contact-item">
+          <strong>◎ Instagram</strong>
+          <span>Thêm liên kết Instagram của bạn</span>
+        </div>
+
+        <div class="contact-item">
+          <strong>⌘ GitHub</strong>
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+            Ghé thăm GitHub
+          </a>
+        </div>
+      </div>
+
+      <a class="back" href="index.html">← Trở về trang chủ</a>
+    </section>
+  </main>
+
+  <footer>HUYNH TNHAAN · THANK YOU FOR VISITING</footer>
+</body>
+</html>
