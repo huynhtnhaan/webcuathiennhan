@@ -3,129 +3,210 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#352116">
-  <title>Huynh TNhaan — Personal Journal</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Huynh TNhaan | Vintage Page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    .landing {
-      min-height: 78vh;
-      display: grid;
-      place-items: center;
-      padding: 65px 20px;
+    * {
+      box-sizing: border-box;
     }
 
-    .cover {
-      width: min(850px, 100%);
-      padding: clamp(35px, 7vw, 76px) 25px;
-      text-align: center;
-      position: relative;
-      outline: 1px solid #b18b5880;
-      outline-offset: -10px;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .cover::before, .cover::after {
-      content: '✳';
-      position: absolute;
-      color: var(--gold);
-      font-size: 22px;
+    body {
+      margin: 0;
+      color: #3d2418;
+      font-family: "DM Sans", sans-serif;
+      background-color: #ead8b9;
+      background-image:
+        radial-gradient(ellipse at 20% 20%, #f6e9d0 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 80%, #c6a47a 0%, transparent 60%);
+      min-height: 100vh;
     }
 
-    .cover::before { top: 20px; left: 23px; }
-    .cover::after { right: 23px; bottom: 20px; }
-
-    .cover h1 { margin: 22px 0 12px; }
-
-    .cover .intro {
-      max-width: 580px;
-      margin: 0 auto;
-      font: clamp(20px, 3vw, 27px)/1.7 var(--serif);
+    header {
+      min-height: 76px;
+      padding: 18px 7%;
+      background: #382116;
+      color: #ead0a5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 2px solid #a57b49;
     }
 
-    .cover .detail {
-      max-width: 510px;
-      margin: 18px auto 30px;
-      color: var(--muted);
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav a {
+      color: #ead0a5;
+      text-decoration: none;
       font-size: 14px;
     }
 
-    .cover-meta {
+    nav a:hover {
+      color: white;
+    }
+
+    .hero {
+      min-height: 78vh;
+      padding: 55px 20px;
       display: flex;
+      align-items: center;
       justify-content: center;
-      gap: 18px;
-      margin-top: 35px;
-      color: var(--muted);
-      font-size: 10px;
-      letter-spacing: 2px;
-    }
-
-    .landing-note {
-      padding: 45px 20px;
       text-align: center;
-      background: #f4e8d2;
-      border-top: 1px solid var(--line);
     }
 
-    .landing-note p {
-      max-width: 620px;
-      margin: auto;
-      color: var(--muted);
+    .paper {
+      width: min(850px, 100%);
+      padding: 65px 35px;
+      position: relative;
+      background: rgba(248, 235, 210, 0.88);
+      border: 1px solid #ad8656;
+      outline: 1px solid rgba(122, 78, 42, 0.3);
+      outline-offset: -9px;
+      box-shadow: 0 18px 50px rgba(64, 38, 20, 0.15);
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #89633b;
+    }
+
+    h1 {
+      margin: 25px 0 18px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(48px, 9vw, 88px);
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    .intro {
+      max-width: 650px;
+      margin: 0 auto;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(23px, 4vw, 34px);
+      line-height: 1.5;
+    }
+
+    .description {
+      max-width: 480px;
+      margin: 22px auto 32px;
+      color: #74563e;
+      line-height: 1.9;
+      font-size: 15px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      padding: 16px 36px;
+      border: 1px solid #d8b77f;
+      outline: 1px solid #5a321e;
+      outline-offset: 4px;
+      background: #4a2b1b;
+      color: #f6e4c2;
+      text-decoration: none;
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+      transition: 0.25s ease;
+    }
+
+    .button:hover {
+      background: #744b2d;
+      transform: translateY(-3px);
+    }
+
+    .footer {
+      padding: 10px 20px 32px;
+      text-align: center;
+      color: #79583b;
+      font-size: 11px;
+      letter-spacing: 3px;
+    }
+
+    .ornament {
+      margin-bottom: 20px;
+      color: #a27a4b;
+      font-size: 24px;
+    }
+
+    @media (max-width: 560px) {
+      header {
+        padding: 18px;
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 18px;
+      }
+
+      .paper {
+        padding: 50px 22px;
+      }
+
+      .intro {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <header class="site-header">
-    <a class="brand" href="index.html">Huynh TNhaan.</a>
-    <nav class="nav">
-      <a class="active" href="index.html">Trang chủ</a>
-      <a href="about.html">Cá nhân</a>
-      <a href="posts.html">Bài đăng</a>
-      <a href="diary.html">Nhật ký</a>
+  <header>
+    <div class="logo">Huynh TNhaan</div>
+
+    <nav>
+      <a href="index.html">Trang chủ</a>
+      <a href="next.html">Khám phá</a>
     </nav>
   </header>
 
-  <main>
-    <section class="landing">
-      <div class="cover paper-card animate-in">
-        <div class="kicker">Personal website · Est. 2026</div>
-        <h1>Xin chào, tôi là<br>Huynh TNhaan.</h1>
+  <main class="hero">
+    <section class="paper">
+      <div class="ornament">✦ ─── ✦ ─── ✦</div>
 
-        <p class="intro">
-          Một chút về tôi, những điều tôi quan tâm
-          và những gì tôi muốn lưu lại.
-        </p>
+      <div class="eyebrow">A little place of my own</div>
 
-        <p class="detail">
-          Đây là nơi tôi chia sẻ thông tin cá nhân,
-          những hình ảnh mình yêu thích và các dòng nhật ký
-          được viết theo cách của riêng mình.
-        </p>
+      <h1>Xin chào!</h1>
 
-        <a class="btn" href="about.html">
-          BẮT ĐẦU <span>↗</span>
-        </a>
-
-        <div class="cover-meta">
-          <span>PERSONAL ARCHIVE</span>
-          <span>✦</span>
-          <span>VOL. 01</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="landing-note">
-      <div class="kicker">A little introduction</div>
-      <h2>Không cần quá nhiều lời.</h2>
-      <p>
-        Bạn có thể tìm thấy thông tin về tôi, xem những bài đăng
-        và hình ảnh đã chia sẻ, hoặc đọc những trang nhật ký
-        được ghi lại theo thời gian.
+      <p class="intro">
+        Chào mừng bạn đến với page do
+        <strong>Huynh TNhaan</strong> tạo ra.
       </p>
+
+      <p class="description">
+        Một góc nhỏ mang màu sắc hoài cổ,
+        lưu giữ những điều mình yêu thích.
+        Cảm ơn bạn đã ghé thăm.
+      </p>
+
+      <a class="button" href="next.html">
+        BẮT ĐẦU <span>→</span>
+      </a>
     </section>
   </main>
 
-  <footer class="site-footer">
-    HUYNH TNHAAN · PERSONAL WEBSITE · 2026
+  <footer class="footer">
+    KHÁM PHÁ &nbsp; · &nbsp; HỌC HỎI &nbsp; · &nbsp; PHÁT TRIỂN
   </footer>
 </body>
 </html>
